@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="yarisma.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="11" Y="23"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="w_yarisma_ana.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="F_yarisma_ana"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="59"/>
+        <CursorPos X="33" Y="65"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="w_yarisma_dm1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="50" Y="17"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="w_yarisma_ana.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="19" Y="127"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="654"/>
+        <CursorPos X="15" Y="673"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../Bileşen/Lazarus/zeosdbo-7.2.4-stable/src/dbc/ZDbcSqLiteUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="217"/>
+        <CursorPos X="90" Y="226"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:/Users/asg/AppData/Local/lazarus/onlinepackagemanager/packages/zeosdbo/src/plain/ZPlainLoader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="229"/>
+        <CursorPos Y="237"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="w_yarisma_dm1.pas"/>
+        <Caret Line="8" Column="59"/>
+      </Position1>
+      <Position2>
+        <Filename Value="w_yarisma_ana.pas"/>
+        <Caret Line="86" Column="19" TopLine="58"/>
+      </Position2>
+      <Position3>
+        <Filename Value="w_yarisma_dm1.pas"/>
+        <Caret Line="17" Column="50"/>
+      </Position3>
+      <Position4>
+        <Filename Value="yarisma.lpr"/>
+        <Caret Line="17" Column="39"/>
+      </Position4>
+      <Position5>
+        <Filename Value="w_yarisma_ana.pas"/>
+        <Caret Line="65" Column="33" TopLine="59"/>
+      </Position5>
+      <Position6>
+        <Filename Value="w_yarisma_ana.pas"/>
+        <Caret Line="66" Column="33" TopLine="60"/>
+      </Position6>
+      <Position7>
+        <Filename Value="w_yarisma_ana.pas"/>
+        <Caret Line="65" Column="33" TopLine="59"/>
+      </Position7>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

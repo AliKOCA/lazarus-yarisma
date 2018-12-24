@@ -1,0 +1,310 @@
+object DM1: TDM1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 366
+  HorizontalOffset = 1055
+  VerticalOffset = 99
+  Width = 370
+  PPI = 96
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Port = 0
+    Database = 'db/yarisma.sqlite3'
+    Protocol = 'sqlite-3'
+    LibraryLocation = 'db/x64/sqlite3.dll'
+    left = 40
+    top = 8
+  end
+  object ZQ_Yarismalar: TZQuery
+    Connection = ZConnection1
+    AfterScroll = ZQ_YarismalarAfterScroll
+    SQL.Strings = (
+      'Select * From Yarismalar'
+      'Order By YarismaIsmi'
+    )
+    Params = <>
+    left = 48
+    top = 256
+    object ZQ_YarismalarOKytNo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'OKytNo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQ_YarismalarYarismaIsmi: TStringField
+      FieldKind = fkData
+      FieldName = 'YarismaIsmi'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 200
+    end
+  end
+  object DS_Yarismalar: TDataSource
+    AutoEdit = False
+    DataSet = ZQ_Yarismalar
+    left = 48
+    top = 312
+  end
+  object ZQ_Yarismacilar: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'Select * From Yarismacilar'
+      'Order BY isim'
+    )
+    Params = <>
+    MasterFields = 'OKytNo'
+    MasterSource = DS_Yarismalar
+    LinkedFields = 'RbtYarismalar'
+    left = 168
+    top = 256
+    object ZQ_YarismacilarOKytNo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'OKytNo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQ_YarismacilarRbtYarismalar: TLargeintField
+      FieldKind = fkData
+      FieldName = 'RbtYarismalar'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQ_Yarismacilarisim: TStringField
+      FieldKind = fkData
+      FieldName = 'isim'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 600
+    end
+    object ZQ_Yarismacilarjuri1: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri2: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri2'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri3: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri3'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri4: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri4'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri5: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri5'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri6: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri6'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri7: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri7'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri8: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri8'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri9: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri9'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_Yarismacilarjuri10: TFloatField
+      FieldKind = fkData
+      FieldName = 'juri10'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '###'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_YarismacilarOrtalama: TFloatField
+      FieldKind = fkData
+      FieldName = 'Ortalama'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+  end
+  object ZQ_Siralama: TZQuery
+    Connection = ZConnection1
+    OnCalcFields = ZQ_SiralamaCalcFields
+    SQL.Strings = (
+      'Select OKytNo, isim, Ortalama From Yarismacilar'
+      'Where  RbtYarismalar = 1'
+      'Order BY Ortalama Desc'
+    )
+    Params = <>
+    left = 280
+    top = 256
+    object ZQ_SiralamaOKytNo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'OKytNo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQ_Siralamaisim: TStringField
+      FieldKind = fkData
+      FieldName = 'isim'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 600
+    end
+    object ZQ_SiralamaOrtalama: TFloatField
+      FieldKind = fkData
+      FieldName = 'Ortalama'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQ_SiralamaSiraNo: TLongintField
+      FieldKind = fkCalculated
+      FieldName = 'SiraNo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object DS_Yarismacilar: TDataSource
+    DataSet = ZQ_Yarismacilar
+    left = 173
+    top = 314
+  end
+  object DS_ZQ_Siralama: TDataSource
+    AutoEdit = False
+    DataSet = ZQ_Siralama
+    left = 280
+    top = 312
+  end
+  object ZQ_Update: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    left = 224
+    top = 96
+  end
+end

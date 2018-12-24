@@ -1,0 +1,9 @@
+object F_yarisma_ana: TF_yarisma_ana
+  Left = 1819
+  Height = 708
+  Top = 114
+  Width = 985
+  Caption = 'Yarışma'
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+end
