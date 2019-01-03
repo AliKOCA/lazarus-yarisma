@@ -1,13 +1,14 @@
 object F_yarisma_ana: TF_yarisma_ana
-  Left = 231
-  Height = 596
-  Top = 108
-  Width = 1129
+  Left = 44
+  Height = 527
+  Top = 164
+  Width = 1225
   Caption = 'Yarışma'
-  ClientHeight = 596
-  ClientWidth = 1129
+  ClientHeight = 527
+  ClientWidth = 1225
   OnCreate = FormCreate
   OnShow = FormShow
+  Position = poScreenCenter
   LCLVersion = '2.0.0.1'
   object DBNavigator1: TDBNavigator
     Left = 16
@@ -29,7 +30,7 @@ object F_yarisma_ana: TF_yarisma_ana
   end
   object DBGrid1: TDBGrid
     Left = 16
-    Height = 408
+    Height = 376
     Top = 48
     Width = 215
     Color = clWindow
@@ -46,7 +47,7 @@ object F_yarisma_ana: TF_yarisma_ana
     Left = 240
     Height = 25
     Top = 16
-    Width = 614
+    Width = 688
     BevelOuter = bvNone
     ChildSizing.EnlargeHorizontal = crsScaleChilds
     ChildSizing.EnlargeVertical = crsScaleChilds
@@ -55,89 +56,82 @@ object F_yarisma_ana: TF_yarisma_ana
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 100
     ClientHeight = 25
-    ClientWidth = 614
+    ClientWidth = 688
     DataSource = DM1.DS_Yarismacilar
     Options = []
     TabOrder = 2
   end
   object DBGrid2: TDBGrid
     Left = 240
-    Height = 544
+    Height = 472
     Top = 48
-    Width = 614
+    Width = 688
     Color = clWindow
     Columns = <    
       item
-        ReadOnly = False
         Title.Caption = 'Yarışmacı'
-        Width = 175
+        Width = 160
         FieldName = 'isim'
       end    
       item
         Title.Caption = 'J1'
-        Width = 35
+        Width = 50
         FieldName = 'juri1'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J2'
-        Width = 35
+        Width = 50
         FieldName = 'juri2'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J3'
-        Width = 35
+        Width = 50
         FieldName = 'juri3'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J4'
-        Width = 35
+        Width = 50
         FieldName = 'juri4'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J5'
-        Width = 35
+        Width = 50
         FieldName = 'juri5'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J6'
-        Width = 35
+        Width = 50
         FieldName = 'juri6'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J7'
-        Width = 35
+        Width = 50
         FieldName = 'juri7'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J8'
-        Width = 35
+        Width = 50
         FieldName = 'juri8'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J9'
-        Width = 35
+        Width = 50
         FieldName = 'juri9'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end    
       item
         Title.Caption = 'J10'
-        Width = 35
+        Width = 50
         FieldName = 'juri10'
-        DisplayFormat = '###'
-      end    
-      item
-        Title.Caption = 'Ort'
-        Width = 35
-        FieldName = 'Ortalama'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end>
     DataSource = DM1.DS_Yarismacilar
     TabOrder = 3
@@ -145,7 +139,7 @@ object F_yarisma_ana: TF_yarisma_ana
   object Label1: TLabel
     Left = 20
     Height = 15
-    Top = 476
+    Top = 436
     Width = 66
     Caption = 'Jüri Adedi:'
     ParentColor = False
@@ -153,7 +147,7 @@ object F_yarisma_ana: TF_yarisma_ana
   object spnJuriAdedi: TSpinEditEx
     Left = 96
     Height = 27
-    Top = 464
+    Top = 424
     Width = 103
     MaxLength = 0
     TabOrder = 4
@@ -163,24 +157,24 @@ object F_yarisma_ana: TF_yarisma_ana
     Value = 5
   end
   object btnOrtalamaHesabEt: TButton
-    Left = 20
+    Left = 16
     Height = 25
-    Top = 496
+    Top = 456
     Width = 204
     Caption = 'Ortalama Hesab Et'
     OnClick = btnOrtalamaHesabEtClick
     TabOrder = 5
   end
   object DBGrid3: TDBGrid
-    Left = 862
-    Height = 520
+    Left = 931
+    Height = 456
     Top = 64
-    Width = 264
+    Width = 293
     Color = clWindow
     Columns = <    
       item
         Title.Caption = 'Sira'
-        Width = 35
+        Width = 50
         FieldName = 'SiraNo'
       end    
       item
@@ -190,18 +184,18 @@ object F_yarisma_ana: TF_yarisma_ana
       end    
       item
         Title.Caption = 'Puan'
-        Width = 40
+        Width = 50
         FieldName = 'Ortalama'
-        DisplayFormat = '###'
+        DisplayFormat = '###.##'
       end>
     DataSource = DM1.DS_ZQ_Siralama
     TabOrder = 6
   end
   object DBText1: TDBText
-    Left = 862
+    Left = 931
     Height = 19
     Top = 39
-    Width = 74
+    Width = 164
     DataField = 'YarismaIsmi'
     DataSource = DM1.DS_Yarismalar
     Font.Height = -16
@@ -210,7 +204,7 @@ object F_yarisma_ana: TF_yarisma_ana
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 862
+    Left = 931
     Height = 19
     Top = 16
     Width = 157
@@ -220,5 +214,14 @@ object F_yarisma_ana: TF_yarisma_ana
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+  end
+  object Button1: TButton
+    Left = 20
+    Height = 25
+    Top = 495
+    Width = 200
+    Caption = 'Yazdır'
+    OnClick = Button1Click
+    TabOrder = 7
   end
 end

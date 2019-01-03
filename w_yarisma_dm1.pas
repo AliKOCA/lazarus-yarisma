@@ -5,7 +5,8 @@ unit w_yarisma_dm1;
 interface
 
 uses
-  Classes, SysUtils, db, FileUtil, ZConnection, ZDataset, ZSqlUpdate;
+  Classes, SysUtils, db, FileUtil, LR_DBSet, LR_Class, ZConnection, ZDataset,
+  ZSqlUpdate;
 
 type
 
@@ -15,6 +16,11 @@ type
     DS_Yarismacilar: TDataSource;
     DS_ZQ_Siralama: TDataSource;
     DS_Yarismalar: TDataSource;
+    frDBDSYarismalar: TfrDBDataSet;
+    frDBDSYarismacilar: TfrDBDataSet;
+    frDBDSSiralama: TfrDBDataSet;
+    frReport1: TfrReport;
+    frReport2: TfrReport;
     ZConnection1: TZConnection;
     ZQ_Siralamaisim: TStringField;
     ZQ_SiralamaOKytNo: TLargeintField;
@@ -41,6 +47,7 @@ type
     ZQ_YarismalarOKytNo: TLargeintField;
     ZQ_YarismalarYarismaIsmi: TStringField;
     procedure DataModuleCreate(Sender: TObject);
+    procedure ZConnection1AfterConnect(Sender: TObject);
     procedure ZQ_SiralamaCalcFields(DataSet: TDataSet);
     procedure ZQ_YarismalarAfterScroll(DataSet: TDataSet);
   private
@@ -60,6 +67,11 @@ implementation
 { TDM1 }
 
 procedure TDM1.DataModuleCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TDM1.ZConnection1AfterConnect(Sender: TObject);
 begin
 
 end;

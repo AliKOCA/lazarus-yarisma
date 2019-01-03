@@ -2,8 +2,8 @@ object DM1: TDM1
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 366
-  HorizontalOffset = 1055
-  VerticalOffset = 99
+  HorizontalOffset = 946
+  VerticalOffset = 107
   Width = 370
   PPI = 96
   object ZConnection1: TZConnection
@@ -12,10 +12,10 @@ object DM1: TDM1
     Properties.Strings = (
       'AutoEncodeStrings='
     )
+    AfterConnect = ZConnection1AfterConnect
     Port = 0
     Database = 'db/yarisma.sqlite3'
     Protocol = 'sqlite-3'
-    LibraryLocation = 'db/x64/sqlite3.dll'
     left = 40
     top = 8
   end
@@ -92,7 +92,7 @@ object DM1: TDM1
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = False
+      Required = True
       Size = 600
     end
     object ZQ_Yarismacilarjuri1: TFloatField
@@ -103,10 +103,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri2: TFloatField
       FieldKind = fkData
@@ -116,10 +116,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri3: TFloatField
       FieldKind = fkData
@@ -129,10 +129,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri4: TFloatField
       FieldKind = fkData
@@ -142,10 +142,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri5: TFloatField
       FieldKind = fkData
@@ -155,10 +155,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri6: TFloatField
       FieldKind = fkData
@@ -168,10 +168,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri7: TFloatField
       FieldKind = fkData
@@ -181,10 +181,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri8: TFloatField
       FieldKind = fkData
@@ -194,10 +194,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri9: TFloatField
       FieldKind = fkData
@@ -207,10 +207,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_Yarismacilarjuri10: TFloatField
       FieldKind = fkData
@@ -220,10 +220,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '###'
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
     object ZQ_YarismacilarOrtalama: TFloatField
       FieldKind = fkData
@@ -233,9 +233,10 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
-      Precision = 2
+      Precision = 3
     end
   end
   object ZQ_Siralama: TZQuery
@@ -243,7 +244,6 @@ object DM1: TDM1
     OnCalcFields = ZQ_SiralamaCalcFields
     SQL.Strings = (
       'Select OKytNo, isim, Ortalama From Yarismacilar'
-      'Where  RbtYarismalar = 1'
       'Order BY Ortalama Desc'
     )
     Params = <>
@@ -276,6 +276,7 @@ object DM1: TDM1
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      DisplayFormat = '###.##'
       MaxValue = 0
       MinValue = 0
       Precision = 2
@@ -306,5 +307,38 @@ object DM1: TDM1
     Params = <>
     left = 224
     top = 96
+  end
+  object frDBDSYarismacilar: TfrDBDataSet
+    DataSet = ZQ_Yarismacilar
+    left = 40
+    top = 144
+  end
+  object frDBDSSiralama: TfrDBDataSet
+    DataSet = ZQ_Siralama
+    left = 40
+    top = 88
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDSYarismacilar
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 40
+    top = 200
+  end
+  object frDBDSYarismalar: TfrDBDataSet
+    DataSet = ZQ_Yarismalar
+    left = 158
+    top = 19
+  end
+  object frReport2: TfrReport
+    Dataset = frDBDSYarismacilar
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 136
+    top = 200
   end
 end

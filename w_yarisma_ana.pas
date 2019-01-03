@@ -14,6 +14,7 @@ type
 
   TF_yarisma_ana = class(TForm)
     btnOrtalamaHesabEt: TButton;
+    Button1: TButton;
     DBGrid1: TDBGrid;
     DBGrid2: TDBGrid;
     DBGrid3: TDBGrid;
@@ -24,6 +25,7 @@ type
     Label2: TLabel;
     spnJuriAdedi: TSpinEditEx;
     procedure btnOrtalamaHesabEtClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -52,7 +54,7 @@ Var IntA:Integer;
     Sql:String;
 begin
   Sql := 'Update Yarismacilar ' + Char(13) +
-         ' Set Ortalama =  (0 ';
+         ' Set Ortalama =  (0.00 ';
   For IntA:=1 To spnJuriAdedi.Value Do
     Begin
     Sql := Sql + ' + juri' + inttostr(IntA);
@@ -64,6 +66,7 @@ begin
   DM1.ZQ_Update.SQL.Clear;
   DM1.ZQ_Update.SQL.Add(Sql);
   DM1.ZQ_Update.ExecSQL;
+  //Memo1.Text:= Sql;
   DM1.ZQ_Yarismacilar.Close;
   DM1.ZQ_Yarismacilar.Open;
 
@@ -76,6 +79,19 @@ begin
          ' Order BY Ortalama Desc ');
   DM1.ZQ_Siralama.Open;
 
+end;
+
+procedure TF_yarisma_ana.Button1Click(Sender: TObject);
+begin
+  if DM1.ZQ_Siralama.Active Then
+   Begin
+   DM1.SiraNo:= 0;
+   DM1.frReport1.LoadFromFile('./rpr/siralama2.lrf');
+   DM1.frReport1.ShowReport;
+   end Else
+   Begin
+   ShowMessage('Evvela Ortalamayı hesab etmelisiniz!');
+   end;
 end;
 
 procedure TF_yarisma_ana.FormShow(Sender: TObject);

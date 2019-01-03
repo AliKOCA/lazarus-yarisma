@@ -16,11 +16,16 @@ begin
 
   RequireDerivedFormResource:=True;
   Application.Initialize;
-  Application.CreateForm(TF_yarisma_ana, F_yarisma_ana);
   Application.CreateForm(TDM1, DM1);
+  DM1.ZConnection1.Database :='./db/yarisma.sqlite3';
   {$IFDEF UNIX}
   DM1.ZConnection1.LibraryLocation:='';
   {$ENDIF}
+  {$IFDEF WINDOWS}
+  DM1.ZConnection1.LibraryLocation:='./db/x64/sqlite3.dll';
+  {$ENDIF}
+
+  Application.CreateForm(TF_yarisma_ana, F_yarisma_ana);
   Application.Run;
 end.
 

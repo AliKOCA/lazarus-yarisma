@@ -18,7 +18,7 @@ Drop Table Yarismacilar;
 Create Table Yarismacilar(
 OKytNo		 	INTEGER PRIMARY KEY AUTOINCREMENT,
 RbtYarismalar	INTEGER	Not Null,
-isim			VarChar(150) 	Not Null UNIQUE,
+isim			VarChar(150) 	Not Null,
 juri1			NUMERIC	Null,
 juri2			NUMERIC	Null,
 juri3			NUMERIC	Null,
@@ -30,7 +30,8 @@ juri8			NUMERIC	Null,
 juri9			NUMERIC	Null,
 juri10			NUMERIC	Null,
 Ortalama		NUMERIC	Null,
-FOREIGN KEY (RbtYarismalar) REFERENCES Yarismalar (OKytNo)
+FOREIGN KEY (RbtYarismalar) REFERENCES Yarismalar (OKytNo),
+UNIQUE (RbtYarismalar, isim)
 );
 
 Delete From Yarismacilar;
@@ -41,7 +42,7 @@ insert into Yarismacilar(RbtYarismalar, isim,
 	(1, "Ömer", 78, 98, 85, 78, 80),
 	(1, "Osman", 88, 98, 85, 78, 80),
 	(1, "Ali", 100, 98, 85, 78, 80),
-	(1, "Hasan", 100, 98, 85, 78, 80),
+	(1, "Hasan", 100, 98, 80, 78, 80),
 	(1, "Hüseyin", 58, 98, 85, 78, 80),
 	(2, "Hatice", 38, 98, 85, 78, 80),	
 	(2, "Fâtımâ", 98, 98, 85, 78, 80),
@@ -50,6 +51,7 @@ insert into Yarismacilar(RbtYarismalar, isim,
 	(3, "A", 68, 98, 85, 78, 80),
 	(3, "B", 68, 98, 85, 78, 80),
 	(4, "C", 68, 98, 85, 78, 80),
+	(5, "C", 68, 98, 85, 78, 80),	
 	(5, "D", 68, 98, 85, 78, 80);
 
 Select * From Yarismacilar
@@ -64,6 +66,16 @@ Order BY Ortalama Desc;
 
 select isim, Ortalama , (select count(*) from Yarismacilar b  where a.OKytNo >= b.OKytNo) as cnt
 from Yarismacilar a
+Where  RbtYarismalar = 1
+Order BY Ortalama Desc;
+
+Update Yarismacilar 
+ Set Ortalama =  (0  + juri1 + juri2 + juri3 + juri4 + juri5) / 5
+Where RbtYarismalar = 1;
+
+
+select isim, Ortalama , (juri1 + juri2 + juri3 + juri4 + juri5)/5 
+from Yarismacilar
 Where  RbtYarismalar = 1
 Order BY Ortalama Desc;
 

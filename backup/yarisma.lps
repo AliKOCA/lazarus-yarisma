@@ -3,13 +3,15 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="yarisma.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="11" Y="23"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="5"/>
+        <CursorPos X="3" Y="27"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -18,12 +20,10 @@
         <ComponentName Value="F_yarisma_ana"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="59"/>
-        <CursorPos X="33" Y="65"/>
-        <UsageCount Value="24"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="30" Y="88"/>
+        <UsageCount Value="29"/>
       </Unit1>
       <Unit2>
         <Filename Value="w_yarisma_dm1.pas"/>
@@ -31,17 +31,17 @@
         <ComponentName Value="DM1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="50" Y="17"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="49"/>
+        <CursorPos X="21" Y="64"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="w_yarisma_ana.lfm"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="94"/>
-        <CursorPos X="19" Y="127"/>
+        <TopLine Value="167"/>
+        <CursorPos X="19" Y="182"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit3>
@@ -67,36 +67,21 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="C:/Users/AsG/AppData/Local/lazarus/onlinepackagemanager/packages/zeosdbo/src/plain/ZPlainLoader.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="215"/>
+        <CursorPos X="27" Y="224"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
     </Units>
-    <JumpHistory Count="7" HistoryIndex="6">
+    <JumpHistory Count="1">
       <Position1>
-        <Filename Value="w_yarisma_dm1.pas"/>
-        <Caret Line="8" Column="59"/>
-      </Position1>
-      <Position2>
-        <Filename Value="w_yarisma_ana.pas"/>
-        <Caret Line="86" Column="19" TopLine="58"/>
-      </Position2>
-      <Position3>
-        <Filename Value="w_yarisma_dm1.pas"/>
-        <Caret Line="17" Column="50"/>
-      </Position3>
-      <Position4>
         <Filename Value="yarisma.lpr"/>
-        <Caret Line="17" Column="39"/>
-      </Position4>
-      <Position5>
-        <Filename Value="w_yarisma_ana.pas"/>
-        <Caret Line="65" Column="33" TopLine="59"/>
-      </Position5>
-      <Position6>
-        <Filename Value="w_yarisma_ana.pas"/>
-        <Caret Line="66" Column="33" TopLine="60"/>
-      </Position6>
-      <Position7>
-        <Filename Value="w_yarisma_ana.pas"/>
-        <Caret Line="65" Column="33" TopLine="59"/>
-      </Position7>
+        <Caret Line="26" Column="45" TopLine="6"/>
+      </Position1>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
